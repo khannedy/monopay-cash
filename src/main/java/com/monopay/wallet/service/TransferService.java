@@ -1,5 +1,6 @@
 package com.monopay.wallet.service;
 
+import com.monopay.wallet.entity.Transfer;
 import com.monopay.wallet.model.service.ListTransferServiceRequest;
 import com.monopay.wallet.model.web.response.TransferWebResponse;
 
@@ -9,5 +10,7 @@ import java.util.List;
 public interface TransferService {
 
   List<TransferWebResponse> list(@Valid ListTransferServiceRequest request);
+
+  void publishTransfer(Transfer transfer);
 
 }
